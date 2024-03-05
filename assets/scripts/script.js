@@ -212,18 +212,69 @@ const team =
        }
     ]
 
+
+const teamBook = document.getElementById(`teamBook`);
+const goalies = document.getElementById(`Goalkeepers`);
+const defenders = document.getElementById(`Defenders`);
+const fielders = document.getElementById(`Midfielders`);
+const forwards = document.getElementById(`Forwards`);
+
+
 for (let teammate of team) {
 
-teamBook.innerHTML += `
-    <div class="col-3 mb-3 ">
+    if(teammate.teamRole == "Goalkeeper")
+    {
+        goalies.innerHTML += 
+        `<div class="col-3 m-3 ">
+            <div class="card text-bg-primary ">
+            <img src="${teammate.photoID}" class="playerImg" alt="${teammate.Identity}">
+              <div class="card-body cardInfo">
+                <h5>${teammate.Identity}</h5>
+                <h6> ${teammate.teamRole}</h6>
+                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+              </div>
+            </div>
+        </div>`
+    }
+    else if (teammate.teamRole == "Defender") 
+    {
+    defenders.innerHTML += 
+    `<div class="col-3 m-3 ">
         <div class="card text-bg-primary ">
         <img src="${teammate.photoID}" class="playerImg" alt="${teammate.Identity}">
           <div class="card-body cardInfo">
             <h5>${teammate.Identity}</h5>
-            <h6> ${teammate.teamRole};</h6>
-            <h6> ${teammate.age}      ${teammate.marketValue};</h6>
+            <h6> ${teammate.teamRole}</h6>
+            <h6> ${teammate.age}      ${teammate.marketValue}</h6>
           </div>
         </div>
-  </div>
-  `
+    </div>`
+    } else if (teammate.teamRole == "Midfielder")
+    {
+        fielders.innerHTML += 
+        `<div class="col-3 m-3 ">
+            <div class="card text-bg-primary ">
+            <img src="${teammate.photoID}" class="playerImg" alt="${teammate.Identity}">
+              <div class="card-body cardInfo">
+                <h5>${teammate.Identity}</h5>
+                <h6> ${teammate.teamRole}</h6>
+                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+              </div>
+            </div>
+        </div>`
+    } else if (teammate.teamRole == "Forward")
+    {
+        forwards.innerHTML += 
+        `<div class="col-3 m-3 ">
+            <div class="card text-bg-primary ">
+            <img src="${teammate.photoID}" class="playerImg" alt="${teammate.Identity}">
+              <div class="card-body cardInfo">
+                <h5>${teammate.Identity}</h5>
+                <h6> ${teammate.teamRole}</h6>
+                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+              </div>
+            </div>
+        </div>`
+    }
+
 }

@@ -5,11 +5,9 @@
 }
 
 .playerImg{
-    max-width: 300px;
-    width: 300px;
-    max-height: 400px;
-    height: 400px;
-    object-fit: cover;
+    max-width: 250px !important;
+    max-height: 350px !important;
+    object-fit: cover !important;
 }
 
 .cardInfo{
