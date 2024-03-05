@@ -219,7 +219,7 @@ const defenders = document.getElementById(`Defenders`);
 const fielders = document.getElementById(`Midfielders`);
 const forwards = document.getElementById(`Forwards`);
 
-
+/*utilizzando il for-of, faccio un controllo di ogni elemento in maniera semplice e poi controllo il ruolo per inserirlo in sezioni specifiche*/
 for (let teammate of team) {
 
     if(teammate.teamRole == "Goalkeeper")
@@ -231,7 +231,8 @@ for (let teammate of team) {
               <div class="card-body cardInfo">
                 <h5>${teammate.Identity}</h5>
                 <h6> ${teammate.teamRole}</h6>
-                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+                <h6> ${teammate.age} YO</h6>
+                <h6> ${teammate.marketValue}</h6>
               </div>
             </div>
         </div>`
@@ -245,7 +246,8 @@ for (let teammate of team) {
           <div class="card-body cardInfo">
             <h5>${teammate.Identity}</h5>
             <h6> ${teammate.teamRole}</h6>
-            <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+            <h6> ${teammate.age} YO</h6>
+            <h6> ${teammate.marketValue}</h6>
           </div>
         </div>
     </div>`
@@ -258,7 +260,8 @@ for (let teammate of team) {
               <div class="card-body cardInfo">
                 <h5>${teammate.Identity}</h5>
                 <h6> ${teammate.teamRole}</h6>
-                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+                <h6> ${teammate.age} YO</h6>
+                <h6> ${teammate.marketValue}</h6>
               </div>
             </div>
         </div>`
@@ -271,7 +274,8 @@ for (let teammate of team) {
               <div class="card-body cardInfo">
                 <h5>${teammate.Identity}</h5>
                 <h6> ${teammate.teamRole}</h6>
-                <h6> ${teammate.age}      ${teammate.marketValue}</h6>
+                <h6> ${teammate.age} YO</h6>
+                <h6> ${teammate.marketValue}</h6>
               </div>
             </div>
         </div>`
